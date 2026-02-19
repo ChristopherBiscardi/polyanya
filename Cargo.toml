@@ -25,7 +25,7 @@ recast = []
 spade = { version = "2.15.0" }
 tracing = { version = "0.1", optional = true }
 hashbrown = { version = "0.16" }
-glam = { version = "0.30.8", features = ["approx"] }
+glam = { version = "0.31", features = ["approx"] }
 smallvec = { version = "1.15", features = ["union", "const_generics"] }
 bvh2d = { version = "0.7" }
 serde = { version = "1.0", features = ["derive"], optional = true }
@@ -49,6 +49,21 @@ rerecast = { version = "0.3.0", features = ["serialize"] }
 
 [workspace]
 members = ["examples/traced"]
+
+[patch."crates-io"]
+rerecast = { git = "https://github.com/ChristopherBiscardi/rerecast.git", branch = "chris-0.19" }
+bevy_time = { git = "https://github.com/bevyengine/bevy" }
+bevy_transform = { git = "https://github.com/bevyengine/bevy" }
+bevy = { git = "https://github.com/bevyengine/bevy" }
+bevy_app = { git = "https://github.com/bevyengine/bevy" }
+bevy_asset = { git = "https://github.com/bevyengine/bevy" }
+bevy_ecs = { git = "https://github.com/bevyengine/bevy" }
+bevy_log = { git = "https://github.com/bevyengine/bevy" }
+bevy_math = { git = "https://github.com/bevyengine/bevy" }
+bevy_platform = { git = "https://github.com/bevyengine/bevy" }
+bevy_reflect = { git = "https://github.com/bevyengine/bevy" }
+bevy_macro_utils = { git = "https://github.com/bevyengine/bevy" }
+bvh2d = { git = "https://github.com/ChristopherBiscardi/bvh2d.git", branch = "chris-0.19" }
 
 [lib]
 bench = false
